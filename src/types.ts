@@ -1,3 +1,7 @@
+export type CreateImage = (
+  width: number, height: number, data?: Uint8ClampedArray
+) => ImageData
+
 export type SourceToDest = (
   source: ImageData,
   dest: ImageData,
