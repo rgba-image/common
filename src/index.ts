@@ -1,0 +1,5 @@
+export { getIndex } from './get-index'
+export { isBigEndian } from './is-big-endian'
+export { isImageData } from './predicates'
+export { rgbaToUint32 } from './rgba-to-uint32'
+export { SourceToDest, Mutate, MutateColor } from './types'
