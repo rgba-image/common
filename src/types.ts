@@ -23,3 +23,5 @@ export type MutateColor = (
   dx?: number, dy?: number,
   dw?: number, dh?: number
 ) => void
+
+export interface GrayData extends ImageData {}

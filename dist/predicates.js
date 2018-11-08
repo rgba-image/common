@@ -21,4 +21,25 @@ exports.isImageData = (imageData) => {
         return false;
     return true;
 };
+exports.isGrayData = (grayData) => {
+    if (!grayData)
+        return false;
+    if (typeof grayData.width !== 'number')
+        return false;
+    if (typeof grayData.height !== 'number')
+        return false;
+    if (grayData.width < 1)
+        return false;
+    if (grayData.height < 1)
+        return false;
+    if (!Number.isInteger(grayData.width))
+        return false;
+    if (!Number.isInteger(grayData.height))
+        return false;
+    if (!(grayData.data instanceof Uint8ClampedArray))
+        return false;
+    if (grayData.data.length !== grayData.width * grayData.height)
+        return false;
+    return true;
+};
 //# sourceMappingURL=predicates.js.map

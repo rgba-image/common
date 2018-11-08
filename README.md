@@ -45,6 +45,24 @@ if( isImageData( id ) ){
 }
 ```
 
+We also add a new interface, `GrayData` - the definition is the same as
+`ImageData` but it is expected to have 1 byte per pixel rather than 4. There is
+a predicate for checking that they match this:
+
+```js
+const { isGrayData } = require( '@rgba-image/common' )
+
+const gray = {
+  width: 300,
+  height: 150,
+  data: new Uint8ClampedArray( 300 * 150 )
+}
+
+if( isGrayData( gray ) ){
+  //...
+}
+```
+
 Get the Uint32 representation of an RGBA color
 
 nb - ImageData stores RGBA in little endian format
