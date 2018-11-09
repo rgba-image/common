@@ -43,3 +43,29 @@ export type CompositeRgbaUint32 = (
   sR: number, sG: number, sB: number, sA: number,
   dR: number, dG: number, dB: number, dA: number
 ) => number
+
+export type CompositeChannel = ( source: number, dest: number ) => number
+
+export type MapRgba = ( r: number, g: number, b: number, a: number ) => Rgba
+
+export type MapRgbaUint32 = (
+  r: number, g: number, b: number, a: number
+) => number
+
+export type MapChannel = ( source: number ) => number
+
+export type AdjustRgba = (
+  r: number, g: number, b: number, a: number, amount: number
+) => Rgba
+
+export type AdjustRgbaUint32 = (
+  r: number, g: number, b: number, a: number, amount: number
+) => number
+
+export type AdjustChannel = ( source: number, amount: number ) => number
+
+export type RgbaStop = [ number, number, number, number, number ]
+
+export type RgbaUint32Stop = [ number, number ]
+
+export type ChannelStop = [ number, number ]

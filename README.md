@@ -8,6 +8,32 @@
 
 ## usage
 
+Clamp a value to byte:
+
+```js
+const { clampByte } = require( '@rgba-image/common' )
+
+// 123
+const r = clampByte( 123.456 )
+
+// 0
+const g = clampByte( -1 )
+
+// 255
+cosnt b = clampByte( 257 )
+```
+
+Clamp a value to uint32:
+
+```js
+const { clampUint32 } = require( '@rgba-image/common' )
+
+// 4294967295
+const v = clampUint32( 4294967296.456 )
+
+// etc
+```
+
 Get an index into ImageData:
 
 ```js
@@ -73,6 +99,11 @@ const { rgbaToUint32 } = require( '@rgba-image/common' )
 const little = rgbaToUint32( 51, 153, 255, 127, true )
 const big = rgbaToUint32( 51, 153, 255, 127, false )
 ```
+
+## TODO
+
+- Document gradient stop types and predicates - actually, all exported types
+- Add predicates for all exported types except functions
 
 ## license
 

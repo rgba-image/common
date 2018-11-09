@@ -1,5 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var clamp_1 = require("./clamp");
+exports.clampByte = clamp_1.clampByte;
+exports.clampUint32 = clamp_1.clampUint32;
 var consts_1 = require("./consts");
 exports.COMPOSITE_NORMAL = consts_1.COMPOSITE_NORMAL;
 exports.COMPOSITE_MULTIPLY = consts_1.COMPOSITE_MULTIPLY;
@@ -19,6 +22,9 @@ exports.isLittleEndian = is_little_endian_1.isLittleEndian;
 var predicates_1 = require("./predicates");
 exports.isImageData = predicates_1.isImageData;
 exports.isGrayData = predicates_1.isGrayData;
+exports.isRgbaStop = predicates_1.isRgbaStop;
+exports.isRgbaUint32Stop = predicates_1.isRgbaUint32Stop;
+exports.isChannelStop = predicates_1.isChannelStop;
 var uint32_1 = require("./uint32");
 exports.rgbaToUint32 = uint32_1.rgbaToUint32;
 exports.uint32ToRgba = uint32_1.uint32ToRgba;

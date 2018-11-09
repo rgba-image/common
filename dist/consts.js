@@ -22,6 +22,7 @@ exports.compositeModeNameToMode = {
     darken: exports.COMPOSITE_DARKEN,
     lighten: exports.COMPOSITE_LIGHTEN,
     'hard light': exports.COMPOSITE_HARD_LIGHT,
-    difference: exports.COMPOSITE_DIFFERENCE
+    difference: exports.COMPOSITE_DIFFERENCE,
+    exclusion: exports.COMPOSITE_EXCLUSION
 };
 //# sourceMappingURL=consts.js.map

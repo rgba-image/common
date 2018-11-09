@@ -42,4 +42,28 @@ exports.isGrayData = (grayData) => {
         return false;
     return true;
 };
+exports.isRgbaStop = (stop) => {
+    if (!stop)
+        return false;
+    if (!stop.length)
+        return false;
+    if (stop.length !== 5)
+        return false;
+    if (!stop.every(v => typeof v === 'number' && !isNaN(v)))
+        return false;
+    return true;
+};
+exports.isRgbaUint32Stop = (stop) => isStop2(stop);
+exports.isChannelStop = (stop) => isStop2(stop);
+const isStop2 = stop => {
+    if (!stop)
+        return false;
+    if (!stop.length)
+        return false;
+    if (stop.length !== 2)
+        return false;
+    if (!stop.every(v => typeof v === 'number' && !isNaN(v)))
+        return false;
+    return true;
+};
 //# sourceMappingURL=predicates.js.map

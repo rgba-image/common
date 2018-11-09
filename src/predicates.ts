@@ -1,4 +1,4 @@
-import { GrayData } from './types'
+import { GrayData, RgbaStop, RgbaUint32Stop, ChannelStop } from './types'
 
 export const isImageData = ( imageData: any ): imageData is ImageData => {
   if ( !imageData ) return false
@@ -24,6 +24,30 @@ export const isGrayData = ( grayData: any ): grayData is GrayData => {
   if ( !Number.isInteger( grayData.height ) ) return false
   if ( !( grayData.data instanceof Uint8ClampedArray ) ) return false
   if ( grayData.data.length !== grayData.width * grayData.height ) return false
+
+  return true
+}
+
+export const isRgbaStop = ( stop: any ): stop is RgbaStop => {
+  if( !stop ) return false
+  if( !stop.length ) return false
+  if( stop.length !== 5 ) return false
+  if( !stop.every( v => typeof v === 'number' && !isNaN( v ) ) ) return false
+
+  return true
+}
+
+export const isRgbaUint32Stop = ( stop: any ): stop is RgbaUint32Stop =>
+  isStop2( stop )
+
+export const isChannelStop = ( stop: any ): stop is ChannelStop =>
+  isStop2( stop )
+
+const isStop2 = stop => {
+  if ( !stop ) return false
+  if ( !stop.length ) return false
+  if ( stop.length !== 2 ) return false
+  if ( !stop.every( v => typeof v === 'number' && !isNaN( v ) ) ) return false
 
   return true
 }
