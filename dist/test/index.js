@@ -54,5 +54,18 @@ describe('common', () => {
         assert.strictEqual(__1.rgbaToUint32(r, g, b, a, true), little);
         assert.strictEqual(__1.rgbaToUint32(r, g, b, a), big);
     });
+    it('rgbaToUint32', () => {
+        const r = 51;
+        const g = 153;
+        const b = 255;
+        const a = 127;
+        const rgba = [r, g, b, a];
+        const uint32Little = __1.rgbaToUint32(r, g, b, a, true);
+        const uint32Big = __1.rgbaToUint32(r, g, b, a, false);
+        const little = __1.uint32ToRgba(uint32Little, true);
+        const big = __1.uint32ToRgba(uint32Big);
+        assert.deepEqual(little, rgba);
+        assert.deepEqual(big, rgba);
+    });
 });
 //# sourceMappingURL=index.js.map

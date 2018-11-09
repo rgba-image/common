@@ -1,5 +1,5 @@
 import * as assert from 'assert'
-import { getIndex, isImageData, rgbaToUint32 } from '../'
+import { getIndex, isImageData, rgbaToUint32, uint32ToRgba } from '../'
 import { isGrayData } from '../predicates';
 
 describe( 'common', () => {
@@ -65,4 +65,21 @@ describe( 'common', () => {
     assert.strictEqual( rgbaToUint32( r, g, b, a, true ), little )
     assert.strictEqual( rgbaToUint32( r, g, b, a ), big )
   })
+
+  it( 'rgbaToUint32', () => {
+    const r = 51
+    const g = 153
+    const b = 255
+    const a = 127
+    const rgba = [ r, g, b, a ]
+
+    const uint32Little = rgbaToUint32( r, g, b, a, true )
+    const uint32Big = rgbaToUint32( r, g, b, a, false )
+
+    const little = uint32ToRgba( uint32Little, true )
+    const big = uint32ToRgba( uint32Big )
+
+    assert.deepEqual( little, rgba )
+    assert.deepEqual( big, rgba )
+  } )
 })

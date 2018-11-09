@@ -1,5 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var consts_1 = require("./consts");
+exports.COMPOSITE_NORMAL = consts_1.COMPOSITE_NORMAL;
+exports.COMPOSITE_MULTIPLY = consts_1.COMPOSITE_MULTIPLY;
+exports.COMPOSITE_SCREEN = consts_1.COMPOSITE_SCREEN;
+exports.COMPOSITE_OVERLAY = consts_1.COMPOSITE_OVERLAY;
+exports.COMPOSITE_DARKEN = consts_1.COMPOSITE_DARKEN;
+exports.COMPOSITE_LIGHTEN = consts_1.COMPOSITE_LIGHTEN;
+exports.COMPOSITE_HARD_LIGHT = consts_1.COMPOSITE_HARD_LIGHT;
+exports.COMPOSITE_DIFFERENCE = consts_1.COMPOSITE_DIFFERENCE;
+exports.COMPOSITE_EXCLUSION = consts_1.COMPOSITE_EXCLUSION;
+exports.compositeModeNames = consts_1.compositeModeNames;
+exports.compositeModeNameToMode = consts_1.compositeModeNameToMode;
 var get_index_1 = require("./get-index");
 exports.getIndex = get_index_1.getIndex;
 var is_little_endian_1 = require("./is-little-endian");
@@ -7,6 +19,7 @@ exports.isLittleEndian = is_little_endian_1.isLittleEndian;
 var predicates_1 = require("./predicates");
 exports.isImageData = predicates_1.isImageData;
 exports.isGrayData = predicates_1.isGrayData;
-var rgba_to_uint32_1 = require("./rgba-to-uint32");
-exports.rgbaToUint32 = rgba_to_uint32_1.rgbaToUint32;
+var uint32_1 = require("./uint32");
+exports.rgbaToUint32 = uint32_1.rgbaToUint32;
+exports.uint32ToRgba = uint32_1.uint32ToRgba;
 //# sourceMappingURL=index.js.map
