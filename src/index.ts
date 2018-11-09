@@ -12,5 +12,5 @@ export { rgbaToUint32, uint32ToRgba } from './uint32'
 
 export {
   CreateImage, SourceToDest, Mutate, MutateColor, GrayData, PlotData,
-  PlotUint32Data, Rgba, CompositeMode, CompositePixel, CompositePixelUint32
+  PlotUint32Data, Rgba, CompositeMode, CompositeRgba, CompositeRgbaUint32
 } from './types'

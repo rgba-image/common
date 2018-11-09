@@ -34,12 +34,12 @@ export type Rgba = [ number, number, number, number ]
 
 export type CompositeMode = -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 
-export type CompositePixel = (
+export type CompositeRgba = (
   sR: number, sG: number, sB: number, sA: number,
   dR: number, dG: number, dB: number, dA: number
 ) => Rgba
 
-export type CompositePixelUint32 = (
+export type CompositeRgbaUint32 = (
   sR: number, sG: number, sB: number, sA: number,
   dR: number, dG: number, dB: number, dA: number
 ) => number

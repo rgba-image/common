@@ -24,5 +24,6 @@ export const compositeModeNameToMode: { [ name: string]: CompositeMode } = {
   darken: COMPOSITE_DARKEN,
   lighten: COMPOSITE_LIGHTEN,
   'hard light': COMPOSITE_HARD_LIGHT,
-  difference: COMPOSITE_DIFFERENCE
+  difference: COMPOSITE_DIFFERENCE,
+  exclusion: COMPOSITE_EXCLUSION
 }

@@ -1,6 +1,6 @@
 {
   "name": "@rgba-image/common",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Common types and utils for rgba-image",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
