@@ -46,6 +46,8 @@ export type CompositeRgbaUint32 = (
 
 export type CompositeChannel = ( source: number, dest: number ) => number
 
+export type CompositeArg = CompositeMode | CompositeRgbaUint32
+
 export type MapRgba = ( r: number, g: number, b: number, a: number ) => Rgba
 
 export type MapRgbaUint32 = (

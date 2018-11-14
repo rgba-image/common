@@ -11,6 +11,7 @@ export declare type CompositeMode = -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 export declare type CompositeRgba = (sR: number, sG: number, sB: number, sA: number, dR: number, dG: number, dB: number, dA: number) => Rgba;
 export declare type CompositeRgbaUint32 = (sR: number, sG: number, sB: number, sA: number, dR: number, dG: number, dB: number, dA: number) => number;
 export declare type CompositeChannel = (source: number, dest: number) => number;
+export declare type CompositeArg = CompositeMode | CompositeRgbaUint32;
 export declare type MapRgba = (r: number, g: number, b: number, a: number) => Rgba;
 export declare type MapRgbaUint32 = (r: number, g: number, b: number, a: number) => number;
 export declare type MapChannel = (source: number) => number;
